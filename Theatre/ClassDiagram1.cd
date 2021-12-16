@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Theatre.MVVM.Model.AgeRating" Collapsed="true">
+    <Position X="9.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgBAAA=</HashCode>
+      <FileName>MVVM\Model\AgeRating.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.Auth" Collapsed="true">
+    <Position X="17" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAACAAAQAAAAAAA=</HashCode>
+      <FileName>MVVM\Model\Auth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.BookKeeping" Collapsed="true">
+    <Position X="20.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAABAAABAAAAAAAAA=</HashCode>
+      <FileName>MVVM\Model\BookKeeping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.Caffe" Collapsed="true">
+    <Position X="7.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACA=</HashCode>
+      <FileName>MVVM\Model\Caffe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.CaffeCheck" Collapsed="true">
+    <Position X="13" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CACAAAAAAAAAAJAAAAAAAACAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>MVVM\Model\CaffeCheck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.Cashbox" Collapsed="true">
+    <Position X="11" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAEAAAAAABAAAAAAAAACAAA=</HashCode>
+      <FileName>MVVM\Model\Cashbox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.Check" Collapsed="true">
+    <Position X="18.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CACAAAAAAAAAABAAAAAAAACAAIAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>MVVM\Model\Check.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.CinemaHall" Collapsed="true">
+    <Position X="12" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAABAAACAAQAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\Model\CinemaHall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.Employee" Collapsed="true">
+    <Position X="22.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAQAAwAAAAAIAAAAAAAAAAAAAg=</HashCode>
+      <FileName>MVVM\Model\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.Film" Collapsed="true">
+    <Position X="15.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIIIAAEAAAAAAAAAAAAAAARAAAAAABAAAA=</HashCode>
+      <FileName>MVVM\Model\Film.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.FilmGenre" Collapsed="true">
+    <Position X="14.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\Model\FilmGenre.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.Lime_FilmContext" Collapsed="true">
+    <Position X="9" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\Model\Lime_FilmContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.Payment" Collapsed="true">
+    <Position X="15.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAABAAAAAAAAAAACAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>MVVM\Model\Payment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.Post" Collapsed="true">
+    <Position X="17" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>MVVM\Model\Post.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.Rate" Collapsed="true">
+    <Position X="13.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgABAAAAAAAA=</HashCode>
+      <FileName>MVVM\Model\Rate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.Recovery" Collapsed="true">
+    <Position X="17" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAACAAAAAAAAAIAAAAAAAAAIAAAAAAACAAA=</HashCode>
+      <FileName>MVVM\Model\Recovery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.RentCinema" Collapsed="true">
+    <Position X="12" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQABAAAAAAAAAAAAQAAgACAAA=</HashCode>
+      <FileName>MVVM\Model\RentCinema.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.Row" Collapsed="true">
+    <Position X="16.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>MVVM\Model\Row.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.Seat" Collapsed="true">
+    <Position X="16.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>MVVM\Model\Seat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.Session" Collapsed="true">
+    <Position X="19" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAACAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAgAAAAA=</HashCode>
+      <FileName>MVVM\Model\Session.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.Status" Collapsed="true">
+    <Position X="15.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\Model\Status.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.Ticket" Collapsed="true">
+    <Position X="12.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAIAAAAAAAAAAAAAABAAAAAAAABAIAIAAAAABA=</HashCode>
+      <FileName>MVVM\Model\Ticket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.TypeHall" Collapsed="true">
+    <Position X="17" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\Model\TypeHall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.TypePayment" Collapsed="true">
+    <Position X="20.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\Model\TypePayment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.Model.User" Collapsed="true">
+    <Position X="13.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAEAAAAAAAAAAAAAAAACAAAQAAAAAAA=</HashCode>
+      <FileName>MVVM\Model\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.MVVM.View.AgeRatingView" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\AgeRatingView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.Core.ObservableObject" Collapsed="true">
+    <Position X="37.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\ObservableObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.BookKeepingView">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\BookKeepingView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.CaffeCheckView">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\CaffeCheckView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.272" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.CaffeView">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\CaffeView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.CashBoxView">
+    <Position X="12.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\CashBoxView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.CheckView">
+    <Position X="14.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\CheckView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.CinemaHallView">
+    <Position X="16" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\CinemaHallView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.EmployeeView">
+    <Position X="17.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\EmployeeView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.FilmView" Collapsed="true">
+    <Position X="5.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\FilmView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.GenreView" Collapsed="true">
+    <Position X="7" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\GenreView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.PaymentView">
+    <Position X="8.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\PaymentView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.PostView">
+    <Position X="10.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\PostView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.RateView">
+    <Position X="12.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\RateView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.RecoveryView">
+    <Position X="14.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\RecoveryView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.RentCinemaView">
+    <Position X="16" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\RentCinemaView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.RowView">
+    <Position X="17.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\RowView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.SeatView">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\SeatView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.SessionView" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\SessionView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.StatusView">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\StatusView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.StudioView">
+    <Position X="10.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\StudioView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.TicketView">
+    <Position X="12.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\TicketView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.TypeHallView">
+    <Position X="14.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\TypeHallView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.TypePaymentView">
+    <Position X="16" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\TypePaymentView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.View.UserView">
+    <Position X="17.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MVVM\View\UserView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.App">
+    <Position X="5.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theatre.LoginWindow">
+    <Position X="7" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>LoginWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MainWindow">
+    <Position X="8.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.ViewModel.TicketsViewModel">
+    <Position X="34" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wEQgAEEEAQIAAAkDQAAMWAABAAAAIjgKAQEoAYAAAKA=</HashCode>
+      <FileName>MVVM\ViewModel\TicketsViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.ViewModel.TypeHallViewModel">
+    <Position X="36.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAEAAAAAAAAkAAAAMEAABAAAAIDggAQAAAIAAAIA=</HashCode>
+      <FileName>MVVM\ViewModel\TypeHallViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.ViewModel.TypePaymentViewModel">
+    <Position X="38.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAEAAAAAAAAkAAAAcEAABAAAAIDgACQAAAIAAAIA=</HashCode>
+      <FileName>MVVM\ViewModel\TypePaymentViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Theatre.MVVM.ViewModel.UserViewModel">
+    <Position X="40.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQhAEAAAAAAAA0AAAAMEAABCAAAILgAABAAAIAAAIA=</HashCode>
+      <FileName>MVVM\ViewModel\UserViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,256 @@
+﻿<UserControl x:Class="Theatre.MVVM.View.FilmView"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:viewModel="clr-namespace:Theatre.MVVM.ViewModel"
+              xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Theatre.MVVM.View"
+             mc:Ignorable="d" 
+             xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <viewModel:FilmViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+       
+        <ListView ItemsSource="{Binding lists}" Foreground="#FFFFFF" SelectedItem="{Binding Film}">
+                <ListView.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Выгрузить таблицу" Command="{Binding ExportCommand}"/>
+                    </ContextMenu>
+                </ListView.ContextMenu>
+                <ListView.View>
+                <GridView>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding NameFlim}">
+                            <GridViewColumnHeader Content="Название" Tag="NameFlim" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding Date}">
+                            <GridViewColumnHeader Content="Дата выпуска" Tag="Date" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding DurationFilm}">
+                            <GridViewColumnHeader Content="Длительность" Tag="DurationFilm" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding StudioId}">
+                            <GridViewColumnHeader Content="Студия" Tag="StudioId" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding GenreId}">
+                            <GridViewColumnHeader Content="Жанр" Tag="GenreId" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding RatingId}">
+                            <GridViewColumnHeader Content="Ограничение" Tag="RatingId" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                    </GridView>
+            </ListView.View>
+            </ListView>
+            <TextBlock Text="Корзина"
+                       Foreground="White"
+                       FontSize="20"
+                       Width="280"
+                       TextAlignment="Center"
+                       Margin="0,0,0,10"
+                       Grid.Row="1"/>
+            <ListView Grid.Row="2" ItemsSource="{Binding DeleteList}"  SelectedItem="{Binding Film}" Foreground="#FFFFFF">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding NameFlim}">
+                            <GridViewColumnHeader Content="Название" Tag="NameFlim" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding Date}">
+                            <GridViewColumnHeader Content="Дата выпуска" Tag="Date" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding DurationFilm}">
+                            <GridViewColumnHeader Content="Длительность" Tag="DurationFilm" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding StudioId}">
+                            <GridViewColumnHeader Content="Студия" Tag="StudioId" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding GenreId}">
+                            <GridViewColumnHeader Content="Жанр" Tag="GenreId" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding RatingId}">
+                            <GridViewColumnHeader Content="Ограничение" Tag="RatingId" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button Grid.Row="4" Content="Удалить"  Command="{Binding DeleteCommand}" BorderThickness="2" BorderBrush="White" Foreground="White" Background="Transparent" material:ButtonAssist.CornerRadius="20" Margin="0 0 100 0" Width="100" Height="40" Cursor="Hand"  />
+            <Button Grid.Row="4" Content="Вернуть"  Command="{Binding BackCommand}" BorderThickness="2" BorderBrush="White" Foreground="White" Background="Transparent" material:ButtonAssist.CornerRadius="20" Margin="100 0 0 0" Width="100" Height="40" Cursor="Hand"  />
+        </Grid>
+        <!--<DataGrid Style="{StaticResource DataGridTheme}"/>-->
+        <Grid Width="280"
+              Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Фильм"
+                       Foreground="White"
+                       FontSize="28"
+                       Width="280"
+                       TextAlignment="Center"
+                       Margin="0,0,0,10"/>
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden">
+                <StackPanel>
+
+                    <TextBlock Text="Название фильма"
+                           Foreground="White"
+                           FontSize="14"
+                           TextAlignment="Center"/>
+                    <TextBox>
+                        <TextBox.Template>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border CornerRadius="10"
+                            Background="#323232"
+                            Width="250" Height="40">
+                                    <Grid>
+                                        <Rectangle StrokeThickness="1"></Rectangle>
+                                        <TextBox Margin="1"
+                                    Text="{Binding Film.NameFlim, Mode =TwoWay}"
+                                     BorderThickness="0"
+                                     Background="Transparent"
+                                     VerticalContentAlignment="Center"
+                                     Padding="5"
+                                     Foreground="White"/>
+                                    </Grid>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                    <TextBlock Text="Дата выпуска"
+                           Foreground="White"
+                           FontSize="14"
+                           TextAlignment="Center"/>
+                    <DatePickerTextBox>
+                        <TextBox.Template>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border CornerRadius="10"
+                            Background="#323232"
+                            Width="250" Height="40">
+                                    <Grid>
+                                        <Rectangle StrokeThickness="1"></Rectangle>
+                                        <TextBox Margin="1"
+                                    Text="{Binding Film.Date, Mode =TwoWay}"
+                                    
+                                     BorderThickness="0"
+                                     Background="Transparent"
+                                     VerticalContentAlignment="Center"
+                                     Padding="5"
+                                     Foreground="White" Cursor="IBeam"/>
+                                    </Grid>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </DatePickerTextBox>
+                    <!--<xctk:DateTimePicker>
+                        <xctk:DateTimePicker.Template>
+                            <ControlTemplate>
+                                <Border Height="40" CornerRadius="10" Background="#323232"  Width="250">
+                                    <xctk:DateTimePicker Value="{Binding Film.Date}"
+                                                         Background="Transparent"
+                                                         BorderThickness="0"
+                                                         Foreground="White"
+                                                         TextAlignment="Left" CultureInfo="ru-RU"/>
+                                </Border>
+                            </ControlTemplate>
+                        </xctk:DateTimePicker.Template>
+                    </xctk:DateTimePicker>-->
+                    <TextBlock Text="Длительность"
+                           Foreground="White"
+                           FontSize="14"
+                           TextAlignment="Center"/>
+                    <TextBox>
+                        <TextBox.Template>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border CornerRadius="10"
+                            Background="#323232"
+                            Width="250" Height="40">
+                                    <Grid>
+                                        <Rectangle StrokeThickness="1"></Rectangle>
+                                        <TextBox Margin="1"
+                                    Text="{Binding Film.DurationFilm, Mode =TwoWay}"
+                                     BorderThickness="0"
+                                     Background="Transparent"
+                                     VerticalContentAlignment="Center"
+                                     Padding="5"
+                                     Foreground="White"/>
+                                    </Grid>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                    <TextBlock Text="Студия"
+                           Foreground="White"
+                           FontSize="14"
+                           TextAlignment="Center"/>
+                    <ComboBox Width="250"
+                        VerticalContentAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Height="40"
+                        Foreground="White"
+                        ItemsSource="{Binding ListStudio}" 
+                        SelectedItem="{Binding Studio,Mode=TwoWay}"
+                        DisplayMemberPath="NameStudio">
+
+                    </ComboBox>
+                    <TextBlock Text="Жанр"
+                           Foreground="White"
+                           FontSize="14"
+                           TextAlignment="Center"/>
+                    <ComboBox Width="250"
+                              VerticalContentAlignment="Center"
+                              HorizontalAlignment="Center"
+                              Height="40"
+                              Foreground="White"
+                              ItemsSource="{Binding ListGenres}" 
+                              SelectedItem="{Binding FilmGenre,Mode=TwoWay}"
+                              DisplayMemberPath="NameGenre">
+                    </ComboBox>
+                    <TextBlock Text="Ограничение"
+                           Foreground="White"
+                           FontSize="14"
+                           TextAlignment="Center"/>
+                    <ComboBox Width="250"
+                              VerticalContentAlignment="Center"
+                              HorizontalAlignment="Center"
+                              Height="40"
+                              Foreground="White"
+                              ItemsSource="{Binding ListRating}" 
+                              SelectedItem="{Binding AgeRating,Mode=TwoWay}"
+                              DisplayMemberPath="NameRating">
+                    </ComboBox>
+                </StackPanel>
+            </ScrollViewer>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Height="55">
+                <Button Width="95"
+                        Content="+"
+                        FontSize="25"
+                        Style="{StaticResource ButtonControlTheme}"
+                        Command="{Binding CreateCommand}"/>
+                <Button Width="95"
+                        Content="✎"
+                        FontSize="25"
+                        Style="{StaticResource ButtonControlTheme}"
+                        Command="{Binding UpdateCommand}"/>
+                <Button FontSize="25"
+                        Width="95"
+                        Content="×"
+                        Style="{StaticResource ButtonControlTheme}"
+                        Command="{Binding LogicalDeleteCommand}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

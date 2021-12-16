@@ -1,0 +1,223 @@
+﻿<UserControl x:Class="Theatre.MVVM.View.CheckView"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:viewModel="clr-namespace:Theatre.MVVM.ViewModel"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+               xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" 
+             xmlns:local="clr-namespace:Theatre.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <viewModel:CheckViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+        
+        <ListView ItemsSource="{Binding lists}" Foreground="#FFFFFF" SelectedItem="{Binding Check}">
+                <ListView.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Выгрузить таблицу" Command="{Binding ExportCommand}"/>
+                    </ContextMenu>
+                </ListView.ContextMenu>
+                <ListView.View>
+                <GridView>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding DatePayment}">
+                            <GridViewColumnHeader Content="Дата оплаты" Tag="DatePayment" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding Amount}">
+                            <GridViewColumnHeader Content="Сумма" Tag="Amount" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding CountGoods}">
+                            <GridViewColumnHeader Content="Количество товара" Tag="CountGoods" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding TypePaymentId}">
+                            <GridViewColumnHeader Content="Тип оплаты" Tag="TypePaymentId" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding CashBoxId}">
+                            <GridViewColumnHeader Content="Номер кассы" Tag="CashBoxId" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                    </GridView>
+            </ListView.View>
+            </ListView>
+            <TextBlock Text="Корзина"
+                       Foreground="White"
+                       FontSize="20"
+                       Width="280"
+                       TextAlignment="Center"
+                       Margin="0,0,0,10"
+                       Grid.Row="1"/>
+            <ListView Grid.Row="2" ItemsSource="{Binding DeleteList}"  SelectedItem="{Binding Deleted}" Foreground="#FFFFFF">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding DatePayment}">
+                            <GridViewColumnHeader Content="Дата оплаты" Tag="DatePayment" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding Amount}">
+                            <GridViewColumnHeader Content="Сумма" Tag="Amount" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding CountGoods}">
+                            <GridViewColumnHeader Content="Количество товара" Tag="CountGoods" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding TypePaymentId}">
+                            <GridViewColumnHeader Content="Тип оплаты" Tag="TypePaymentId" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                        <GridViewColumn  Width="auto" DisplayMemberBinding="{Binding CashBoxId}">
+                            <GridViewColumnHeader Content="Номер кассы" Tag="CashBoxId" Click="ColumnSorting"/>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button Grid.Row="4" Content="Удалить"  Command="{Binding DeleteCommand}" BorderThickness="2" BorderBrush="White" Foreground="White" Background="Transparent" material:ButtonAssist.CornerRadius="20" Width="100" Height="40"  />
+        </Grid>
+        <!--<DataGrid Style="{StaticResource DataGridTheme}"/>-->
+        <Grid Width="280"
+              Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Чек"
+                       Foreground="White"
+                       FontSize="28"
+                       Width="280"
+                       TextAlignment="Center"
+                       Margin="0,0,0,10"/>
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden">
+                <StackPanel>
+
+                    <TextBlock Text="Дата оплаты"
+                           Foreground="White"
+                           FontSize="14"
+                           TextAlignment="Center"/>
+                    <DatePickerTextBox>
+                        <TextBox.Template>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border CornerRadius="10"
+                            Background="#323232"
+                            Width="250" Height="40">
+                                    <Grid>
+                                        <Rectangle StrokeThickness="1"></Rectangle>
+                                        <TextBox Margin="1"
+                                    Text="{Binding Check.DatePayment, Mode =TwoWay}"
+                                    
+                                     BorderThickness="0"
+                                     Background="Transparent"
+                                     VerticalContentAlignment="Center"
+                                     Padding="5"
+                                     Foreground="White" Cursor="IBeam"/>
+                                    </Grid>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </DatePickerTextBox>
+                    <TextBlock Text="Сумма покупки"
+                           Foreground="White"
+                           FontSize="14"
+                           TextAlignment="Center"/>
+                    <TextBox>
+                        <TextBox.Template>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border CornerRadius="10"
+                            Background="#323232"
+                            Width="250" Height="40">
+                                    <Grid>
+                                        <Rectangle StrokeThickness="1"></Rectangle>
+                                        <TextBox Margin="1"
+                                    Text="{Binding Check.Amount, Mode =TwoWay}"
+                                     BorderThickness="0"
+                                     Background="Transparent"
+                                     VerticalContentAlignment="Center"
+                                     Padding="5"
+                                     Foreground="White"/>
+                                    </Grid>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                    <TextBlock Text="Количество товаров"
+                           Foreground="White"
+                           FontSize="14"
+                           TextAlignment="Center"/>
+                    <TextBox>
+                        <TextBox.Template>
+                            <ControlTemplate TargetType="{x:Type TextBox}">
+                                <Border CornerRadius="10"
+                            Background="#323232"
+                            Width="250" Height="40">
+                                    <Grid>
+                                        <Rectangle StrokeThickness="1"></Rectangle>
+                                        <TextBox Margin="1"
+                                    Text="{Binding Check.CountGoods, Mode =TwoWay}"
+                                     BorderThickness="0"
+                                     Background="Transparent"
+                                     VerticalContentAlignment="Center"
+                                     Padding="5"
+                                     Foreground="White"/>
+                                    </Grid>
+                                </Border>
+                            </ControlTemplate>
+                        </TextBox.Template>
+                    </TextBox>
+                    <TextBlock Text="Тип оплаты"
+                           Foreground="White"
+                           FontSize="14"
+                           TextAlignment="Center"/>
+                    <ComboBox Width="250"
+                        VerticalContentAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Height="40"
+                        Foreground="White"
+                        ItemsSource="{Binding ListType}" 
+                        SelectedItem="{Binding TypePayment,Mode=TwoWay}"
+                        DisplayMemberPath="NameType">
+
+                    </ComboBox>
+                    <TextBlock Text="Номер кассы"
+                           Foreground="White"
+                           FontSize="14"
+                           TextAlignment="Center"/>
+                    <ComboBox Width="250"
+                        VerticalContentAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Height="40"
+                        Foreground="White"
+                        ItemsSource="{Binding ListCashBox}" 
+                        SelectedItem="{Binding Cashbox,Mode=TwoWay}"
+                        DisplayMemberPath="IdCaffe">
+
+                    </ComboBox>
+                </StackPanel>
+            </ScrollViewer>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Height="55">
+                <Button Width="95"
+                        Content="+"
+                        FontSize="25"
+                        Style="{StaticResource ButtonControlTheme}"
+                        Command="{Binding CreateCommand}"/>
+                <Button Width="95"
+                        Content="✎"
+                        FontSize="25"
+                        Style="{StaticResource ButtonControlTheme}"
+                        Command="{Binding UpdateCommand}"/>
+                <Button FontSize="25"
+                        Width="95"
+                        Content="×"
+                        Style="{StaticResource ButtonControlTheme}"
+                        Command="{Binding LogicalDeleteCommand}"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>
