@@ -6,7 +6,7 @@
               xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Theatre.MVVM.View"
-             mc:Ignorable="d" 
+             mc:Ignorable="d"  
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.DataContext>
         <viewModel:AgeRatingViewModel/>

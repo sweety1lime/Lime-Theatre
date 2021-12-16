@@ -166,6 +166,7 @@ namespace Theatre.MVVM.ViewModel
         {
             if (Deleted.IdUser != null)
             {
+
                 var deleted = await Converter.Deletter("Users", Deleted.IdUser.Value);
                 MessageBox.Show($"{Deleted.IdUser}: {deleted}\n");
                 ReadAsync();

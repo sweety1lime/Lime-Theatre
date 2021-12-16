@@ -228,6 +228,7 @@ namespace Theatre.MVVM.ViewModel
             CreateCSV.WriteCSV(exportList, "Employees");
         }
 
+
         public string ValidationErrorMessage()
         {
             if (Employee == null) return String.Empty;
