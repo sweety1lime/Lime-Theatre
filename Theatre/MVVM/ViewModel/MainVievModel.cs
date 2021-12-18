@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using Theatre.Core;
 using Theatre.MVVM.Model;
 
 namespace Theatre.MVVM.ViewModel
 {
-    class MainVievModel : ObservableObject
+    public class MainVievModel : ObservableObject
     {
         #region Команды
         public RelayCommand HomeViewCommand { get; set; }
@@ -64,47 +65,85 @@ namespace Theatre.MVVM.ViewModel
         public UserViewModel UserVM { get; set; }
         #endregion
 
+        private Visibility[] _visibilities;
+
+        public Visibility[] Visibilities
+        {
+            get { return _visibilities; }
+            set
+            {
+                _visibilities = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private Post post;
+
+        public Post Post
+        {
+            get { return post; }
+            set
+            {
+                post = value;
+                if (value != null)
+                    SetVisibility();
+                OnPropertyChanged();
+            }
+        }
 
         private object _currentView;
 
         public object CurrentView
         {
             get { return _currentView; }
-            set 
-            { 
+            set
+            {
                 _currentView = value;
                 OnPropertyChanged();
-            
+
             }
         }
-       
+
+        private void SetVisibility()
+        {
+            Visibilities = new Visibility[] { Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible };
+            if (Post?.IdPost == 1)
+                Visibilities = new Visibility[] { Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible };
+            if (Post?.IdPost == 2)
+                Visibilities = new Visibility[] { Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed };
+            if (Post?.IdPost == 3)
+                Visibilities = new Visibility[] { Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Visible, Visibility.Collapsed, Visibility.Collapsed };
+            if (Post?.IdPost == 4)
+                Visibilities = new Visibility[] { Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Collapsed, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Visible, Visibility.Collapsed, Visibility.Visible, Visibility.Visible };
+        }
 
         public MainVievModel()
         {
             HomeVM = new FilmViewModel();
-            GenreVM = new GanreViewModel();
             AgeVM = new AgeRatingViewModel();
-            BookVM = new BookKeepingViewModel();
-            CafeVM = new CaffeViewModel();
-            CaffeCheckVM = new CaffeCheckViewModel();
-            CashBoxVM = new CashBoxViewModel();
-            CheckVM = new CheckViewModel();
-            HallVM = new CinemaHallViewModel();
-            EmployeeVM = new EmployeeViewModel();
-            PaymentVM = new PaymentViewModel();
-            PostVM = new PostViewModel();
-            RateVM = new RateViewModel();
-            RecoveryVM = new RecoveryViewModel();
-            RentVM = new RentCinemaViewModel();
-            RowVM = new RowViewModel();
-            SeatVM = new SeatViewModel();
-            SessionVM = new SessionViewModel();
-            StatusVM = new StatusViewModel();
             StudioVM = new StudioViewModel();
-            TicketVM = new TicketsViewModel();
+            GenreVM = new GanreViewModel();
+            HallVM = new CinemaHallViewModel();
             TypeHallVM = new TypeHallViewModel();
-            TypePaymentVM = new TypePaymentViewModel();
+            SeatVM = new SeatViewModel();
+            RowVM = new RowViewModel();
+            SessionVM = new SessionViewModel();
+            EmployeeVM = new EmployeeViewModel();
+            PostVM = new PostViewModel();
+            PaymentVM = new PaymentViewModel();
+            RecoveryVM = new RecoveryViewModel();
+            BookVM = new BookKeepingViewModel();
             UserVM = new UserViewModel();
+            TicketVM = new TicketsViewModel();
+            StatusVM = new StatusViewModel();
+            CashBoxVM = new CashBoxViewModel();
+            CafeVM = new CaffeViewModel();
+            TypePaymentVM = new TypePaymentViewModel();
+            RateVM = new RateViewModel();
+            RentVM = new RentCinemaViewModel();
+            CheckVM = new CheckViewModel();
+            CaffeCheckVM = new CaffeCheckViewModel();
+
             ChangeCurrentView(HomeVM);
 
             HomeViewCommand = new RelayCommand(o => { ChangeCurrentView(HomeVM); });

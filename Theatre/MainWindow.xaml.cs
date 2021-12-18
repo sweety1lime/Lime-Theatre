@@ -21,12 +21,12 @@ namespace Theatre
     /// </summary>
     public partial class MainWindow : Window
     {
- 
+        public MainVievModel VievModel => DataContext as MainVievModel;
         public MainWindow()
         {
             InitializeComponent();
         }
-       
+
         private void CloseApplication(object sender, MouseButtonEventArgs e) => Environment.Exit(0);
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

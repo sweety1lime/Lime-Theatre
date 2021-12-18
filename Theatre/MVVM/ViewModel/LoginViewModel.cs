@@ -19,6 +19,7 @@ namespace Theatre.MVVM.ViewModel
         public RelayCommand LoginCommand { get; set; }
 
         private ObservableCollection<User> _user;
+        private ObservableCollection<Post> _post;
 
         private Auth _login;
 
@@ -42,6 +43,7 @@ namespace Theatre.MVVM.ViewModel
             Login = new Auth();
             LoginCommand = new RelayCommand(o => { CheckLogin(); });
             _user = await Converter.Getter<User>("Users");
+            _post = await Converter.Getter<Post>("Posts");
 
         }
 
@@ -58,7 +60,10 @@ namespace Theatre.MVVM.ViewModel
         private void OpenMainWindow(User human)
         {
             var currentWindow = Application.Current.MainWindow;
-            Application.Current.MainWindow = new MainWindow();
+            var role = _post.First(x => x.IdPost == human.PostId);
+            var mainWindow = new MainWindow();
+            mainWindow.VievModel.Post = role;
+            Application.Current.MainWindow = mainWindow;
             Application.Current.MainWindow.Show();
             currentWindow.Close();
         }
