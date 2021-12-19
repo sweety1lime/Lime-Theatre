@@ -120,6 +120,10 @@
                 <view:BookKeepingView/>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewModel:DiagramViewModel}">
+                <view:DiagramWindow/>
+            </DataTemplate>
+
         </ResourceDictionary>
 
 

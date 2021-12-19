@@ -30,6 +30,7 @@
                 <ListView.ContextMenu>
                     <ContextMenu>
                         <MenuItem Header="Выгрузить таблицу" Command="{Binding ExportCommand}"/>
+                        <MenuItem Header="Составить диаграмму" Command="{Binding DiagrammCommand}"/>
                     </ContextMenu>
                 </ListView.ContextMenu>
                 <ListView.View>

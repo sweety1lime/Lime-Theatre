@@ -8,6 +8,7 @@ using System.Windows;
 using Theatre.Core;
 using Theatre.DBcontext;
 using Theatre.MVVM.Model;
+using Theatre.MVVM.View;
 
 namespace Theatre.MVVM.ViewModel
 {
@@ -33,6 +34,7 @@ namespace Theatre.MVVM.ViewModel
         public RelayCommand LogicalDeleteCommand { get; set; }
         public RelayCommand BackCommand { get; set; }
         public RelayCommand ExportCommand { get; set; }
+        public RelayCommand DiagrammCommand { get; set; }
 
         private Film _film;
 
@@ -192,6 +194,7 @@ namespace Theatre.MVVM.ViewModel
             LogicalDeleteCommand = new RelayCommand(x => { LogicalDelete(); });
             BackCommand = new RelayCommand(x => { Back(); });
             ExportCommand = new RelayCommand(x => { ExportTable(); });
+            DiagrammCommand = new RelayCommand(o => { ShowDiagramm(); });
         }
 
         public void Back()
@@ -222,6 +225,11 @@ namespace Theatre.MVVM.ViewModel
             }
         }
 
+        private void ShowDiagramm()
+        {
+            DiagramWindow diagramm = new DiagramWindow();
+            diagramm.ShowDialog();
+        }
         public async void DeleteAsync()
         {
             if (Deleted.IdFilm != null)
